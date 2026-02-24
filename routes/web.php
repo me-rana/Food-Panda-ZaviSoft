@@ -4,11 +4,16 @@ use App\Http\Controllers\Backend\BackendController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Frontend View Management------------------------------------------------------------------------------>
+Route::get('/',[FrontendController::class, 'index'] )->name('Home');
+Route::get('/contact',[FrontendController::class, 'contact'])->name('Contact');
+Route::post('/contact',[FrontendController::class, 'contact_submitted'])->name('Contact Submitted');
+Route::get('/search', [FrontendController::class, 'myquery'])->name('Search Result');
+Route::get('/product/{id}', [FrontendController::class, 'product_details'])->name('Single Product');
+Route::post('/newsletter', [FrontendController::class, 'newsletter'])->name('Newsletter');
 
 Route::middleware([
     'auth:sanctum',
