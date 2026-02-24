@@ -17,34 +17,78 @@ class ProductSeeder extends Seeder
     {
         //
         $category = Category::updateOrCreate(
-            ['slug' => Str::slug('Technology')],
+            ['slug' => Str::slug('Food')],
             [
-                'name'       => 'Technology',
+                'name'       => 'Food',
+                'image_path' => 'categories/03eCZddkwb7cea4QwLOk054vcTzRn1TPXguew0bn.jpg',
+            ]
+        );
+
+        $category_two = Category::updateOrCreate(
+            ['slug' => Str::slug('Drinks')],
+            [
+                'name'       => 'Drinks',
                 'image_path' => 'categories/03eCZddkwb7cea4QwLOk054vcTzRn1TPXguew0bn.jpg',
             ]
         );
 
         Product::updateOrCreate(
-            ['slug' => Str::slug('HP 845 G8')],
+            ['slug' => Str::slug('Burger')],
             [
-                'name'           => 'HP 845 G8',
+                'name'           => 'Burger',
                 'quantity'       => 10,
-                'sell_price'     => 42500,
-                'purchase_price' => 37500,
+                'sell_price'     => 50,
+                'purchase_price' => 35,
                 'image_path'     => 'products/RLR2wljHCaw9NXAEqU0vIOA0uV6NO0rbwCBtIO8v.jpg',
                 'category_id'    => $category->id,
             ]
         );
 
         Product::updateOrCreate(
-            ['slug' => Str::slug('iPhone 15 Pro Max')],
+            ['slug' => Str::slug('Pizza')],
             [
-                'name'           => 'iPhone 15 Pro Max',
+                'name'           => 'Pizza',
                 'quantity'       => 10,
-                'sell_price'     => 220000,
-                'purchase_price' => 180000,
+                'sell_price'     => 800,
+                'purchase_price' => 650,
                 'image_path'     => 'products/QEXCGsbWWnSMpoc8gVfjmKr0ACFeYgwLPmIsnzJL.jpg',
                 'category_id'    => $category->id,
+            ]
+        );
+
+        Product::updateOrCreate(
+            ['slug' => Str::slug('Tehari')],
+            [
+                'name'           => 'Tehari',
+                'quantity'       => 10,
+                'sell_price'     => 150,
+                'purchase_price' => 80,
+                'image_path'     => 'products/QEXCGsbWWnSMpoc8gVfjmKr0ACFeYgwLPmIsnzJL.jpg',
+                'category_id'    => $category->id,
+            ]
+        );
+
+          Product::updateOrCreate(
+            ['slug' => Str::slug('CocoCola 500m')],
+            [
+                'name'           => 'CocoCola 500m',
+                'quantity'       => 50,
+                'sell_price'     => 50,
+                'purchase_price' => 45,
+                'image_path'     => 'products/QEXCGsbWWnSMpoc8gVfjmKr0ACFeYgwLPmIsnzJL.jpg',
+                'category_id'    => $category_two->id,
+            ]
+        );
+
+        Product::updateOrCreate(
+            ['slug' => Str::slug('Borhani')],
+            [
+                'name'           => 'Borhani',
+                'quantity'       => 100,
+                'sell_price'     => 70,
+                'purchase_price' => 50,
+                'image_path'     => 'products/QEXCGsbWWnSMpoc8gVfjmKr0ACFeYgwLPmIsnzJL.jpg',
+                'category_id'    => $category_two->id,
             ]
         );
     }
