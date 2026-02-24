@@ -18,7 +18,7 @@
     <div class="container-fluid py-5">
         <div class="row px-xl-5">
             <div class="col-lg-5 pb-5">
-                <img class="w-100 h-100" src="{{ asset('storage/'.$p->image_path) }}" alt="Image">
+                <img class="w-100 h-100" src="{{ asset('storage/'.$product->image_path) }}" alt="Image">
             </div>
 
             <div class="col-lg-7 pb-5">
