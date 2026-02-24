@@ -18,7 +18,7 @@
     <div class="container-fluid py-5">
         <div class="row px-xl-5">
             <div class="col-lg-5 pb-5">
-                <img class="w-100 h-100" src="../../{{$product->image_path}}" alt="Image">      
+                <img class="w-100 h-100" src="{{ asset('storage/'.$p->image_path) }}" alt="Image">
             </div>
 
             <div class="col-lg-7 pb-5">
@@ -35,7 +35,7 @@
                 </div>
                 <h3 class="font-weight-semi-bold mb-4">৳{{$product->price}}</h3>
                 <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</p>
-                
+
                 <div class="d-flex align-items-center mb-4 pt-2">
                     <div class="input-group quantity mr-3" style="width: 130px;">
                         <div class="input-group-btn">
@@ -102,7 +102,7 @@
                                     <li class="list-group-item px-0">
                                         Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
                                     </li>
-                                  </ul> 
+                                  </ul>
                             </div>
                             <div class="col-md-6">
                                 <ul class="list-group list-group-flush">
@@ -118,7 +118,7 @@
                                     <li class="list-group-item px-0">
                                         Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
                                     </li>
-                                  </ul> 
+                                  </ul>
                             </div>
                         </div>
                     </div>
@@ -205,14 +205,14 @@
 
                                 <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>{{$product->quantity}} Pcs</a>
                                 <a href="../../product/{{$product->id}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Visit</a>
-                            
-                                
+
+
                             </div>
                         </div>
                         @endforeach
                     @endif
-                    
-                    
+
+
                 </div>
             </div>
         </div>
