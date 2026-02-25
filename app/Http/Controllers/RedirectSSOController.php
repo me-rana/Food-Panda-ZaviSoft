@@ -20,6 +20,6 @@ public function toEcom(Request $request)
     $token = $user->createToken('sso')->plainTextToken;
 
 
-    return redirect('https://ecom-app.rana.my.id//sso/login?token='.$token);
+    return redirect('https://ecom-app.rana.my.id/sso/login?token='.$token);
 }
 }
