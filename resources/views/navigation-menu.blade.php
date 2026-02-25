@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('go.food') }}" :active="request()->routeIs('go.food')">
+                    <x-nav-link href="{{ route('go.ecom') }}" :active="request()->routeIs('go.ecom')">
                         {{ __('Jump To Ecommerce') }}
                     </x-nav-link>
                 </div>
@@ -188,7 +188,7 @@
         </div>
 
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('go.food') }}" :active="request()->routeIs('go.food')">
+            <x-responsive-nav-link href="{{ route('go.ecom') }}" :active="request()->routeIs('go.ecom')">
                 {{ __('Jump To Ecommerce') }}
             </x-responsive-nav-link>
         </div>
