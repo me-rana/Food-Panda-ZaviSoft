@@ -6,8 +6,8 @@ A Laravel-based inventory and sales management system with product tracking, cat
 
 ## 📸 Cover Image
 <p align="center">
-  <img src="assets/img/FoodCover.png" alt="Project Screenshot 1" width="45%">
-  <img src="assets/img/FoodPanda.png" alt="Project Screenshot 2" width="45%">
+  <img src="public/assets/img/FoodCover.png" alt="Food App Cover" width="45%">
+  <img src="public/assets/img/FoodPanda.png" alt="Project Screenshot 2" width="45%">
 </p>
 
 ---
