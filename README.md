@@ -5,7 +5,10 @@ A Laravel-based inventory and sales management system with product tracking, cat
 ---
 
 ## 📸 Cover Image
-(Add your screenshot/banner here)
+<p align="center">
+  <img src="assets/img/FoodCover.png" alt="Project Screenshot 1" width="45%">
+  <img src="assets/img/FoodPanda.png" alt="Project Screenshot 2" width="45%">
+</p>
 
 ---
 
@@ -66,6 +69,18 @@ Now update database credentials inside .env. <br>
 <code>php artisan db:seed</code> <br>
 
 ### 🔐 Default Admin Login
+- Login Two Way
+- 1. Sanctum (JetStream) 
+- 2. Oauth2 (Passport) - Api Login [Sodium Extention Enabled Required] <br>
+
+ ## Procedure: Code Within Project, In Simple
+1. User logs into Project A
+2. A creates Sanctum token
+3. Redirect to Project B with token
+4. B asks A to validate token
+5. If valid → B logs user in
+
+- Normal Login
 <code>
     Email: admin@domain.com
     Password: 012345
@@ -103,7 +118,9 @@ database/
  ├── migrations/
  ├── seeders/
 resources/views/
-routes/web.php
+routes/
+ ├── web.php
+ ├── api.php
 </code>
 
 ## 📄 License
